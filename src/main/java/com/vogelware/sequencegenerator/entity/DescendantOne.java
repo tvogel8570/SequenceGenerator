@@ -13,12 +13,8 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "descendant_one")
+@SequenceGenerator(name = "entity_generator", sequenceName = "descendant_one_id_seq", allocationSize = 1)
 public class DescendantOne extends AbstractDatabaseEntity {
-    @SequenceGenerator(name = "entity_generator", sequenceName = "descendant_one_id_seq", allocationSize = 1)
-    public Long getId() {
-        return id;
-    }
-
     @Version
     private Integer version;
     private String name;
