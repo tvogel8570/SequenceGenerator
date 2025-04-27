@@ -1,0 +1,11 @@
+spring:
+  flyway:
+    locations: classpath:test/db/migration
+    enabled: true
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.sql: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.orm.jdbc.bind: TRACE
